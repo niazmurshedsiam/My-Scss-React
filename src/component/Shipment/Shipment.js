@@ -1,9 +1,10 @@
 import React from 'react';
 
-const Shipment = () => {
+const Shipment = (props) => {
+    const {count} = props;
     return (
         <div>
-            <h1>This is Shipment</h1>
+            <h1>This is Shipment {count}</h1>
         </div>
     );
 };
