@@ -5,12 +5,12 @@ import Shipment from './component/Shipment/Shipment';
 import { createContext, useState } from 'react';
 export const CategoryContext = createContext();
 function App() {
-  const [count,setCount] = useState(0);
+  const [category,setCategory] = useState(0);
   return (
-    <CategoryContext.Provider value={count}>
-      <Header count={count} setCount={setCount}></Header>
+    <CategoryContext.Provider value={[category,setCategory]}>
+      <Header></Header>
       <Home></Home>
-      <Shipment count={count} setCount={setCount}></Shipment>
+      <Shipment></Shipment>
     </CategoryContext.Provider>
   );
 }
